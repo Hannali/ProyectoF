@@ -30,6 +30,27 @@ body {
 .fa{
 color: #337ab7;
 }
+.tab-pane{
+  color: white;
+}
+.col-md-5{
+  color: white;
+}
+.col-md-6{
+    color: white;
+}
+.col-md-4{
+color: black;
+}
+.col-md-8{
+color: #66CCCC;
+}
+.page-header{
+  color: white;
+}
+.col-lg-12{
+  color: white;
+}
 /* Home Page Carousel */
 
 header.carousel {
