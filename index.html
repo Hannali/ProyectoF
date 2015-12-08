@@ -210,7 +210,28 @@
                 <h2 class="page-header">Donde nos encontramos</h2>
             </div>
 
-            </div>
+
+            <div class="col-md-6">
+<div id='player'>
+<audio  id = "audio"  preload = "auto"  tabindex = "0"  controls = ""  type = "audio/mpeg" controls autoplay >
+<source src='02 - Payphone.mp3.mp3' type='audio/mp3'>
+Hola, tu navegador no está actualizado y no puede mostrar este contenido.
+</audio>
+</div>
+<ul id='playlist'>
+<li class='active'><a href='02 - Payphone.mp3'> PayPhone</a></li>
+<li><a href='12 - Beautiful Goodbye.mp3'>Beautiful Goodbye</a></li>
+<li><a href='06 - Love Somebody.mp3'>Love Somebody</a></li>
+<li><a href='do i wanna know.mp3'>Do I Wanna Know</a></li>
+<li><a href='Ed Sheeran   FireFly   Lyric video.mp3'>FireFly</a></li>
+<li><a href='OneRepublic - Love Runs Out.mp3'>Love Runs Out</a></li>
+
+</ul>
+</div>
+  </div>
+
+
+
             <div class="col-md-6">
                 <img class="img-responsive" src="images/ubicacion.jpg" alt="">
             </div>
@@ -259,5 +280,10 @@
     </script>
 
 </body>
+<script>
+//<![CDATA[
+var audio;var playlist;var tracks;var current;initaudio();function initaudio(){current=0;audio=$('audio');playlist=$('#playlist');tracks=playlist.find('li a');len=tracks.length-1;audio[0].volume=1;playlist.find('a').click(function(e){e.preventDefault();link=$(this);current=link.parent().index();runaudio(link,audio[0])});audio[0].addEventListener('ended',function(e){current++;if(current>len){current=0;link=playlist.find('a')[0]}else{link=playlist.find('a')[current]}runaudio($(link),audio[0])})}function runaudio(link,player){player.src=link.attr('href');par=link.parent();par.addClass('active').siblings().removeClass('active');audio[0].load();audio[0].play()}
+//]]>
+</script>
 
 </html>
